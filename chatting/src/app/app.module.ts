@@ -14,7 +14,7 @@ import {
 import { GroupchatComponent } from './groupchat/groupchat.component';
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'groupchat', component: GroupchatComponent },
+  { path: 'groupchat', component: GroupchatComponent },  //Routing Paths
 
  /*  { path: 'showdetail', component: ShowdetailComponent},
   { path: 'editdetail', component:EditComponent }
@@ -26,10 +26,10 @@ export function getAuthServiceConfigs() {
       [
         {
           id: FacebookLoginProvider.PROVIDER_ID,
-          provider: new FacebookLoginProvider("2086481178030707")
+          provider: new FacebookLoginProvider("2086481178030707")  //Facebook unique id
         },
         {
-          id: GoogleLoginProvider.PROVIDER_ID,
+          id: GoogleLoginProvider.PROVIDER_ID,    //Google unique id
           provider: new GoogleLoginProvider("71057685722-nm306p40r3j4dt2rreod3s08d7b747al.apps.googleusercontent.com")
         }
       ]

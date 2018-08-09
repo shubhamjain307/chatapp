@@ -14,7 +14,7 @@ export class GroupchatComponent implements OnInit {
   setData(){
 
 
-  this.auth.setServer().subscribe(res=>{
+  this.auth.setServer().subscribe(res=>{  //Used for setting up the services
 
     console.log(res);   
   })
@@ -31,6 +31,8 @@ export class GroupchatComponent implements OnInit {
   allMsg=[];
   findChannel(){
     this.auth.findChannel().subscribe(res=>{
+
+        //Function for finding channels
       //console.log("RES value"+(res.channels[0].unique_name));
       console.log("len"+res.channels.length);
       for(let channelIndex=0;channelIndex<res.channels.length;channelIndex++){
@@ -39,8 +41,8 @@ export class GroupchatComponent implements OnInit {
           // console.log("channel array: "+ this.channelArray);
           // console.log("channel name: "+this.channel);
           this.channelLen=this.channelArray.length;  
-
-      for(let index=0;index<this.channelLen;index++){
+                                                   
+      for(let index=0;index<this.channelLen;index++){   //For each can't be used on res
         if(this.channelArray[index]==this.channel)
         {
           //console.log("channel found");
@@ -60,7 +62,7 @@ export class GroupchatComponent implements OnInit {
   })
   }
 
-  createChannel(){
+  createChannel(){   //Function for creating channel
     console.log("New Channel: "+this.newChannel);
     this.auth.createChannel(this.newChannel).subscribe(res=>{
       console.log("Channel Id "+JSON.stringify(res.sid));
@@ -97,7 +99,7 @@ export class GroupchatComponent implements OnInit {
     console.log(err);
   });
   setTimeout(
-    function(){
+    function(){   //used for reloading the page in 1 sec
       location.reload();
     },1000);
   }
@@ -117,7 +119,7 @@ export class GroupchatComponent implements OnInit {
 
   ngOnInit() {
    
-    this.getAllMsg();
+    this.getAllMsg(); //First function to be called
 
   }
 

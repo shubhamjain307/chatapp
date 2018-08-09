@@ -20,9 +20,9 @@ export class AuthorityService {
  // chennalList:any;
   //idChannel:string="CHff222371f35e4c8ebca8af335b15ba1b";
  // email:string="shubham.jain307.com";
-  email=localStorage.getItem("email");
-  idService:string="ISb83ef09bb5844db5be47385f3c99d641";
-  idChannel:string="CH8017938e93f541319c7067a7a1282081";
+  email=localStorage.getItem("email");                            
+  idService:string="ISb83ef09bb5844db5be47385f3c99d641";  //service ID
+  idChannel:string="CH8017938e93f541319c7067a7a1282081";   //Channel ID
 
   constructor(private http:HttpClient) { }
    

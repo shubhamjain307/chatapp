@@ -18,15 +18,15 @@ export class LoginComponent implements OnInit {
   public socialSignIn(socialPlatform : string) {
     let socialPlatformProvider;
     if(socialPlatform == "facebook"){
-      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;
+      socialPlatformProvider = FacebookLoginProvider.PROVIDER_ID;   //Facebook login 
     }else if(socialPlatform == "google"){
-      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;
+      socialPlatformProvider = GoogleLoginProvider.PROVIDER_ID;     //Google login
     
     } 
     
     this.socialAuthService.signIn(socialPlatformProvider).then(
       (userData) => {
-        console.log(socialPlatform+" sign in data : " , userData);
+        console.log(socialPlatform+" sign in data : " , userData);  //sign in
         // Now sign-in with userData
         // ...
         localStorage.setItem("email",userData.email);
