@@ -1,0 +1,60 @@
+/* ----- navigation bar setup ----- */
+.nav {
+    float: left;
+    width: 25%;
+    background: rgb(122, 171, 194);
+    color: #fff;
+    height: 100vh;
+    padding: 2%;
+}
+.nav input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+/* ----- chatroom messages setup ----- */
+
+.right {
+    float: left;
+    width: 75%;
+    height:90vh;
+    background: fff;
+    padding-left: 10%;
+    margin-top: 3%;
+    overflow-y: scroll;
+}
+
+.chat {
+    margin-bottom: 45px;
+}
+
+input {
+    width: 50%;
+    height: 35px;
+    margin-right: 20px;
+    border-radius: 2%;
+    border: 0;
+    border: 1px solid blue;
+}
+
+button {
+    width: 50px;
+    height: 30px;
+    background-color: rgb(59, 122, 141);
+    border: 0;
+    border-radius: 10%;
+    color: #fff;
+    font-weight: bold;
+}
+
+.send {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: -20px;
+}
+
+ul {
+    list-style: none;
+  }

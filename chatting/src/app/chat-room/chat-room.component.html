@@ -1,0 +1,32 @@
+<!-- <button (click)="createService()">Generate New Service</button> -->
+
+<!-- navigation bar -->
+<div class="nav">
+  <strong>GROUP-CHAT</strong>
+  <br>
+  <input type="text" placeholder=" Search channel" [(ngModel)]="channel"><strong (click)="findChannel()">FIND</strong>
+  <p>{{foundChannel}}</p>
+  <br>
+  <!-- <span (click)="joinChannel()">Join</span><br/> -->
+  <input type="text" placeholder=" Create Channel" [(ngModel)]="newChannel"> <strong (click)="createChannel()">+</strong>
+  <br>
+  <u><strong>Channels</strong></u>
+  <ul *ngFor="let channel of allChannels">
+    <li>{{channel}}</li>
+  </ul>
+</div>
+
+<!-- chatroom messages -->
+<div class="right">
+  <div class="chat">
+    <ul *ngFor="let msg of allMsg">
+      <li>{{msg}}</li>
+    </ul>
+  </div>
+
+<!-- message input and send button -->
+  <div class="send">
+      <input type="text" [(ngModel)]="myMsg" placeholder="write message ...">
+      <button (click)="sendMsg()">Send</button>
+  </div>
+</div>
