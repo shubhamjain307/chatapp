@@ -2,7 +2,8 @@
 
 <!-- navigation bar -->
 <div class="nav">
-  <strong>GROUP-CHAT</strong>
+  <strong>GROUP-CHAT</strong>&nbsp;
+  <button type="button" (click)="logout()">logout</button>
   <br>
   <input type="text" placeholder=" Search channel" [(ngModel)]="channel"><strong (click)="findChannel()">FIND</strong>
   <p>{{foundChannel}}</p>

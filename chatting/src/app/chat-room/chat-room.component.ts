@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {ChatService} from '../chat.service';
+import {Router } from '../../../node_modules/@angular/router';
 
 @Component({
   selector: 'app-chat',
@@ -18,7 +19,7 @@ export class ChatRoomComponent implements OnInit {
   allMsg=[];
   allChannels=[];
 
-  constructor(private chatService:ChatService) { }
+  constructor(private chatService:ChatService,private route:Router) { }
   
   //creates service
   createService(){
@@ -115,5 +116,15 @@ export class ChatRoomComponent implements OnInit {
   err=>{
     console.log(err);
   })
+  }
+  logout(){
+    let logout = confirm("Do you really want to logout?");
+    if(logout){
+      localStorage.clear();
+      localStorage.clear();
+      this.route.navigate(['/']);
+    }else{
+      return;
+    }
   }
 }
